@@ -38,4 +38,4 @@ for i = 1:100
     
     
 end
-disp("³‰ğ‚·‚éŠm—¦F@"+(double(300)-wrong)/300.0);
+disp((double(300)-wrong)/300.0);
