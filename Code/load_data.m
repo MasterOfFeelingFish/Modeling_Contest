@@ -1,5 +1,6 @@
 %%load data
-clc; clear all;
+clc;
+
 load('Data.mat')
 size(Test_facemask)
 for m = 1:5

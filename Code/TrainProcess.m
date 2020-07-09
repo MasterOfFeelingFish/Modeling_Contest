@@ -1,15 +1,21 @@
 function [result,W,data_mean] = TrainProcess(raw_data)
 global refer
 [w,h,type,num]=size(raw_data);
+% D_data =zeros(w*h/2,type*num);
 D_data =zeros(w*h,type*num);
-p_k=96;
+p_k=95;
 
 %% To turn Image data manifesting in form of 2-D vector into One dimensional form. 
 for i = 1:num
     for j = 1:type
         tmp =raw_data(:,:,j,i);
-        tmp = tmp';
-        D_data(:,j+type*(i-1)) = tmp(:);
+        tmp = Transform(tmp,5,80,300);
+     
+        %---
+        %tmp = tmp(1:512);
+        %---
+        
+        D_data(:,j+type*(i-1)) = tmp;
     end
 end
 %% To generate and tackle with the covariance matrix.

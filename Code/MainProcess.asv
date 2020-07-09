@@ -12,9 +12,9 @@ wrong = 0;
 
 for i = 1:100
     for j= 1:3
-        test = mat2gray(Train_DAT(:,:,j,i));
+        test = mat2gray(Test_facemask(:,:,j,i));
         
-        o_test = Transform(test,5,80,300);
+        o_test = Transform(test,10,,256);
         
         %---
         
