@@ -9,7 +9,7 @@ p_k=95;
 for i = 1:num
     for j = 1:type
         tmp =raw_data(:,:,j,i);
-        tmp = Transform(tmp,5,80,300);
+        tmp = Transform(tmp,5,80,320);
      
         %---
         %tmp = tmp(1:512);

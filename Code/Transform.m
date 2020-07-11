@@ -8,9 +8,9 @@ if alpha == 0
 end
 
 %% Special Process Part
-for i = b:k
-    data(i) = (1+alpha)*data(i);
-end
+
+data(b:k) = (1+alpha)*data(b:k);
+
 
 %%
 result = data;
