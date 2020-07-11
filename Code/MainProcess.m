@@ -4,7 +4,7 @@ load('Data.mat')
 global train_date;
 global W;
 
-[train_date,W,d_mean]=TrainProcess(mat2gray(Train_DAT(:,:,1,1:100)));
+[train_date,W,d_mean]=TrainProcess(Train_DAT(:,:,1,1:100)));
 
 t_ans = 0;
 
@@ -12,7 +12,7 @@ wrong = 0;
 
 for i = 1:100
     for j= 1:3
-        test = mat2gray(Train_DAT(:,:,j,i));
+        test = (Train_DAT(:,:,j,i));
         
         o_test = Transform(test,4.5,80,320);
         
